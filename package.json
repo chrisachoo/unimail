@@ -15,10 +15,40 @@
 		"react-email-alternative",
 		"bun"
 	],
-	"module": "index.ts",
+	"exports": {
+		".": {
+			"types": "./dist/index.d.ts",
+			"import": "./dist/index.mjs",
+			"require": "./dist/index.cjs"
+		},
+		"./core": {
+			"types": "./dist/core/index.d.ts",
+			"import": "./dist/core/index.js",
+			"require": "./dist/core/index.cjs"
+		},
+		"./mailer": {
+			"types": "./dist/mailer/index.d.ts",
+			"import": "./dist/mailer/index.js",
+			"require": "./dist/mailer/index.cjs"
+		},
+		"./mailer/transports": {
+			"types": "./dist/mailer/transports/index.d.ts",
+			"import": "./dist/mailer/transports/index.js",
+			"require": "./dist/mailer/transports/index.cjs"
+		},
+		"./transports": {
+			"types": "./dist/mailer/transports/index.d.ts",
+			"import": "./dist/mailer/transports/index.js",
+			"require": "./dist/mailer/transports/index.cjs"
+		}
+	},
+	"main": "dist/index.cjs",
+	"module": "dist/index.mjs",
+	"types": "dist/index.d.ts",
 	"scripts": {
-		"build": "tsup src/index.ts --format esm,cjs --dts --minify",
+		"build": "tsup",
 		"dev": "bun run src/examples/demo.ts",
+		"test": "bun test",
 		"clean": "rm -rf dist",
 		"format:fix": "prettier --write .",
 		"format": "prettier --write .",

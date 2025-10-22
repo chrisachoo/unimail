@@ -1,15 +1,15 @@
 {
 	"compilerOptions": {
 		// 🧠 Experimental / Advanced
-		"incremental": true,
+		"incremental": false,
 
 		"target": "ESNext",
-		"lib": ["ESNext"],
+		"lib": ["ESNext", "DOM"],
 		"moduleDetection": "force",
 		"module": "Preserve",
 		"moduleResolution": "bundler",
 		"resolveJsonModule": true,
-		"allowImportingTsExtensions": true,
+		"allowImportingTsExtensions": false,
 		"allowJs": true,
 
 		// ✅ Type Checking & Strictness
@@ -27,7 +27,7 @@
 		"declaration": true,
 		"declarationMap": false,
 		"emitDeclarationOnly": false,
-		"noEmit": true,
+		"noEmit": false,
 		"outDir": "dist",
 
 		// 💡 Interoperability & Module Behavior
