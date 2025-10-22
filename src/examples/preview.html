@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Unimail Preview</title>
+		<style>
+			body {
+				margin: 0;
+				font-family:
+					system-ui,
+					-apple-system;
+			}
+			.container {
+				max-width: 800px;
+				margin: 0 auto;
+				padding: 16px;
+			}
+			iframe {
+				width: 100%;
+				height: 80vh;
+				border: 1px solid #e5e7eb;
+			}
+			.toolbar {
+				display: flex;
+				gap: 8px;
+				margin-bottom: 12px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="toolbar">
+				<button id="light">Light</button>
+				<button id="dark">Dark</button>
+			</div>
+			<iframe id="preview"></iframe>
+		</div>
+		<script type="module">
+			import { Button, Text } from "../index.ts"
+			import { layout, render } from "../core/index.ts"
+			import { createTheme } from "../styles/defaults.ts"
+
+			const lightTheme = createTheme({})
+			const darkTheme = createTheme({
+				colors: { background: "#0f172a", surface: "#1e293b", text: "#e2e8f0", primary: "#10b981" },
+			})
+
+			function build(theme) {
+				const body = layout({
+					header: "Preview",
+					body: `
+            ${Text({ children: "Live theme preview", class: "text-base" })}
+            ${Button({ children: "CTA", class: "bg-primary text-white px-4 py-2 rounded" })}
+          `,
+					footer: "Unimail sandbox",
+				})
+				return render({ body, theme })
+			}
+
+			const iframe = document.getElementById("preview")
+			function setHtml(html) {
+				const doc = iframe.contentDocument
+				doc.open()
+				doc.write(html)
+				doc.close()
+			}
+
+			document.getElementById("light").onclick = () => setHtml(build(lightTheme))
+			document.getElementById("dark").onclick = () => setHtml(build(darkTheme))
+			setHtml(build(lightTheme))
+		</script>
+	</body>
+</html>
