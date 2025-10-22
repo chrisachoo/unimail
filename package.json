@@ -1,0 +1,45 @@
+{
+	"name": "unimail",
+	"type": "module",
+	"version": "0.1.0",
+	"description": "A lightweight, framework-agnostic email templating library that generates beautiful, standards-compliant HTML with Tailwind-like utilities — no React required.",
+	"author": "Chisachoo",
+	"license": "MIT",
+	"keywords": [
+		"email",
+		"templating",
+		"html",
+		"framework-agnostic",
+		"tailwind",
+		"inline-css",
+		"react-email-alternative",
+		"bun"
+	],
+	"module": "index.ts",
+	"scripts": {
+		"build": "tsup src/index.ts --format esm,cjs --dts --minify",
+		"dev": "bun run src/examples/demo.ts",
+		"clean": "rm -rf dist",
+		"format:fix": "prettier --write .",
+		"format": "prettier --write .",
+		"lint:fix": "eslint . --fix",
+		"lint": "eslint ."
+	},
+	"peerDependencies": {
+		"typescript": "^5"
+	},
+	"devDependencies": {
+		"@antfu/eslint-config": "^6.0.0",
+		"@types/bun": "latest",
+		"eslint": "^9.37.0",
+		"eslint-plugin-format": "^1.0.2",
+		"eslint-plugin-perfectionist": "^4.15.1",
+		"lint-staged": "^16.2.6",
+		"prettier": "3.6.2",
+		"tsup": "^8.5.0"
+	},
+	"lint-staged": {
+		"*.{ts,tsx,json,css,md}": "eslint --fix",
+		"*.{css,md}": "prettier --write"
+	}
+}

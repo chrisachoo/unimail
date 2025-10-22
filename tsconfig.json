@@ -1,0 +1,40 @@
+{
+	"compilerOptions": {
+		// 🧠 Experimental / Advanced
+		"incremental": true,
+
+		"target": "ESNext",
+		"lib": ["ESNext"],
+		"moduleDetection": "force",
+		"module": "Preserve",
+		"moduleResolution": "bundler",
+		"resolveJsonModule": true,
+		"allowImportingTsExtensions": true,
+		"allowJs": true,
+
+		// ✅ Type Checking & Strictness
+		"strict": true,
+		"noFallthroughCasesInSwitch": true,
+		"noImplicitOverride": true,
+		"noPropertyAccessFromIndexSignature": false,
+		"noUncheckedIndexedAccess": true,
+
+		// 🧹 Linting & Developer Experience
+		"noUnusedLocals": false,
+		"noUnusedParameters": false,
+
+		// ⚙️ Output & Build Configuration
+		"declaration": true,
+		"declarationMap": false,
+		"emitDeclarationOnly": false,
+		"noEmit": true,
+		"outDir": "dist",
+
+		// 💡 Interoperability & Module Behavior
+		"esModuleInterop": true,
+		"forceConsistentCasingInFileNames": true,
+		"verbatimModuleSyntax": true,
+		"skipLibCheck": true
+	},
+	"include": ["src"]
+}
