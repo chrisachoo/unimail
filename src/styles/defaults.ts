@@ -1,4 +1,4 @@
-import type { Theme } from "../model/types"
+import type { Theme } from "@lib/model"
 
 export const defaultTheme: Theme = {
 	colors: {

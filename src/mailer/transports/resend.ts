@@ -1,4 +1,4 @@
-import type { MailTransport, SendInput, SendResult } from "../types"
+import type { MailTransport, SendInput, SendResult } from "@lib/model"
 
 export function resendTransport(apiKey: string): MailTransport {
 	return {

@@ -1,6 +1,6 @@
-import type { Mail, MailerConfig, SendInput, SendResult } from "./types"
+import type { Mail, MailerConfig, SendInput, SendResult } from "@lib/model"
 
-import { renderEmail } from "../core/render"
+import { renderEmail } from "@lib/core/render"
 
 export function createMailer(config: MailerConfig) {
 	const { from, transport } = config

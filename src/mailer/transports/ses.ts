@@ -1,4 +1,4 @@
-import type { MailTransport, SendInput, SendResult } from "../types"
+import type { MailTransport, SendInput, SendResult } from "@lib/model"
 
 export function sesV3Transport({ accessKeyId: _accessKeyId, region: _region, secretAccessKey: _secretAccessKey }: { accessKeyId: string, secretAccessKey: string, region: string }): MailTransport {
 	// const endpoint = `https://email.${_region}.amazonaws.com/v2/email/outbound-emails` // SESv2 API
