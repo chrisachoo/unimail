@@ -1,4 +1,4 @@
-import type { HTMLComponent, Theme } from "../model/types"
+import type { HTMLComponent, Theme } from "../model"
 
 import { getTheme } from "../core/context"
 import { mergeUtilities } from "../core/merge-utilities"
