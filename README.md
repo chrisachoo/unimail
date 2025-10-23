@@ -70,8 +70,9 @@ Output:
 				href="https://unimail.dev"
 				target="_blank"
 				style="background-color:#2563eb;color:#ffffff;padding:8px 16px;border-radius:6px;"
-				>Get Started</a
 			>
+				Get Started
+			</a>
 		</td>
 	</tr>
 </table>
@@ -178,8 +179,6 @@ await mailer.send({
 setTheme(myTheme) // apply globally
 getTheme() // returns current theme
 
-```
-
 ---
 
 ## 🏗️ Build & Local Dev
@@ -206,4 +205,3 @@ MIT © 2025
 This project is maintained by:
 
 - [chrisachoo](https://github.com/chrisachoo) (GitHub)
-```
