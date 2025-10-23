@@ -46,8 +46,10 @@
 	"module": "dist/index.mjs",
 	"types": "dist/index.d.ts",
 	"scripts": {
-		"build": "tsup",
+		"build": "bun run clean && tsup",
+		"build:types": "tsc -p tsconfig.json --emitDeclarationOnly --declaration --declarationMap false --noEmit false",
 		"dev": "bun run src/examples/demo.ts",
+		"preview": "bun --hot src/examples/serve.ts",
 		"test": "bun test",
 		"clean": "rm -rf dist",
 		"format:fix": "prettier --write .",

@@ -1,4 +1,5 @@
-import type { MailTransport, SendInput, SendResult } from "../mailer/types"
+import type { MailTransport, SendInput, SendResult } from "../model"
+
 import { describe, expect, test } from "bun:test"
 import { createMailer } from "../index"
 
