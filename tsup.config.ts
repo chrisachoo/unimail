@@ -8,7 +8,7 @@ export default defineConfig(options => ({
 	env: { NODE_ENV: options.watch ? "development" : "production" },
 	format: ["esm", "cjs"],
 	minify: !options.watch,
-	onSuccess: options.watch ? "echo 🧱 Rebuilt Unimail!" : undefined,
+	onSuccess: options.watch ? "echo 🧱 Rebuilt unimailx!" : undefined,
 	outDir: "dist",
 	skipNodeModulesBundle: true,
 	sourcemap: false,

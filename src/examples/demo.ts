@@ -15,10 +15,10 @@ const darkTheme = createTheme({
 const body = layout({
 	body: `
       ${Text({ children: "Styled with a custom theme.", class: "text-base text-white" })}
-      ${Button({ children: "Open Unimail", class: "bg-primary text-white px-4 py-2 rounded", href: "https://unimail.dev", theme: darkTheme })}
+      ${Button({ children: "Open unimailx", class: "bg-primary text-white px-4 py-2 rounded", href: "https://unimailx.dev", theme: darkTheme })}
     `,
 	containerClass: "bg-surface p-4",
-	footer: "Thanks for trying Unimail!",
+	footer: "Thanks for trying unimailx!",
 	header: "Dark Mode Email"
 })
 
@@ -29,4 +29,4 @@ console.log(email)
 
 // eslint-disable-next-line node/no-process-env
 const mailer = createMailer({ from: "no-reply@example.com", transport: resendTransport(process.env.RESEND_API_KEY || "") })
-void mailer.send({ body, subject: "Hello from Unimail", to: "user@example.com" })
+void mailer.send({ body, subject: "Hello from unimailx", to: "user@example.com" })

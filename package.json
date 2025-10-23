@@ -1,19 +1,23 @@
 {
-	"name": "unimail",
+	"name": "unimailx",
 	"type": "module",
 	"version": "0.1.1-beta.0",
 	"description": "A lightweight, framework-agnostic email templating library that generates beautiful, standards-compliant HTML with Tailwind-like utilities — no React required.",
 	"author": "Chisachoo",
 	"license": "MIT",
 	"keywords": [
+		"aws-ses",
+		"bun",
 		"email",
-		"templating",
-		"html",
 		"framework-agnostic",
-		"tailwind",
+		"html",
 		"inline-css",
+		"mailer",
 		"react-email-alternative",
-		"bun"
+		"resend",
+		"sendgrid",
+		"tailwind",
+		"templating"
 	],
 	"exports": {
 		".": {

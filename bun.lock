@@ -2,7 +2,7 @@
   "lockfileVersion": 1,
   "workspaces": {
     "": {
-      "name": "unimail",
+      "name": "unimailx",
       "devDependencies": {
         "@antfu/eslint-config": "^6.0.0",
         "@types/bun": "latest",

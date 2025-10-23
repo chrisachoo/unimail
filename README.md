@@ -1,8 +1,8 @@
-# 🪶 Unimail
+# 🪶 unimailx
 
 > A lightweight, framework-agnostic email templating library for building beautiful HTML emails — no React required.
 
-Unimail lets you compose styled, standards-compliant emails with simple HTML components and Tailwind-like utilities.  
+unimailx lets you compose styled, standards-compliant emails with simple HTML components and Tailwind-like utilities.  
 No JSX, no build tools — just TypeScript and clean HTML.
 
 ---
@@ -20,7 +20,7 @@ No JSX, no build tools — just TypeScript and clean HTML.
 ## 🧰 Installation
 
 ```bash
-bun add unimail
+bun add unimailx
 ```
 
 ---
@@ -28,19 +28,19 @@ bun add unimail
 ## 🧩 Usage
 
 ```ts
-import { Section, Text, Button, createTheme, createMailer } from "unimail"
+import { Section, Text, Button, createTheme, createMailer } from "unimailx"
 // core utilities
-import { merge, apply, render, renderText, layout } from "unimail/core"
+import { merge, apply, render, renderText, layout } from "unimailx/core"
 // transports
-import { resendTransport } from "unimail/mailer/transports"
+import { resendTransport } from "unimailx/mailer/transports"
 
 const email = Section({
 	class: "bg-white p-4 rounded shadow-sm",
 	children: `
-    ${Text({ class: "text-xl font-bold text-center", children: "Welcome to Unimail!" })}
+    ${Text({ class: "text-xl font-bold text-center", children: "Welcome to unimailx!" })}
     ${Text({ class: "text-base", children: "Build beautiful HTML emails anywhere." })}
     ${Button({
-			href: "https://unimail.dev",
+			href: "https://unimailx.dev",
 			class: "bg-blue text-white p-2 rounded px-4 py-2",
 			children: "Get Started"
 		})}
@@ -63,11 +63,11 @@ Output:
 			style="background-color:#ffffff;padding:16px;border-radius:6px;box-shadow:0 1px 3px rgba(0,0,0,0.1);"
 		>
 			<p style="font-size:20px;font-weight:bold;text-align:center;">
-				Welcome to Unimail!
+				Welcome to unimailx!
 			</p>
 			<p style="font-size:16px;">Build beautiful HTML emails anywhere.</p>
 			<a
-				href="https://unimail.dev"
+				href="https://unimailx.dev"
 				target="_blank"
 				style="background-color:#2563eb;color:#ffffff;padding:8px 16px;border-radius:6px;"
 			>
@@ -80,7 +80,7 @@ Output:
 
 ---
 
-## 🧠 Why Unimail?
+## 🧠 Why unimailx?
 
 - Works anywhere (Bun, Node, Deno, edge runtimes)
 - No dependencies — blazing fast
@@ -113,10 +113,10 @@ Types:
 
 ### 🎨 Custom Themes
 
-Unimail supports theming out of the box.
+unimailx supports theming out of the box.
 
 ```ts
-import { createTheme, Button } from "unimail"
+import { createTheme, Button } from "unimailx"
 
 const myTheme = createTheme({
 	colors: {
@@ -128,9 +128,9 @@ const myTheme = createTheme({
 })
 
 const html = Button({
-	href: "https://unimail.dev",
+	href: "https://unimailx.dev",
 	class: "bg-primary text-white px-4 py-2 rounded",
-	children: "Try Unimail",
+	children: "Try unimailx",
 	theme: myTheme
 })
 
@@ -140,14 +140,14 @@ console.log(html)
 Optional global helpers:
 
 ````ts
-import { setTheme, getTheme } from "unimail/core";
+import { setTheme, getTheme } from "unimailx/core";
 ---
 
 ## ✉️ Mailer (Config + Transports)
 
 ```ts
-import { createMailer, createTheme } from "unimail";
-import { resendTransport } from "unimail/mailer/transports";
+import { createMailer, createTheme } from "unimailx";
+import { resendTransport } from "unimailx/mailer/transports";
 
 const theme = createTheme({ colors: { primary: "#9333ea" } });
 
@@ -162,7 +162,7 @@ await mailer.send({
   subject: "Welcome",
   body: layout({
     header: "Welcome",
-    body: Button({ href: "https://unimail.dev", class: "bg-primary text-white px-4 py-2 rounded", children: "Get started", theme })
+    body: Button({ href: "https://unimailx.dev", class: "bg-primary text-white px-4 py-2 rounded", children: "Get started", theme })
   }),
   preheader: "Quick preview",
 });
