@@ -1,4 +1,4 @@
-import type { Theme } from "../model/types"
+import type { Theme } from "../model"
 
 export function themeToCssVars(theme: Theme): Record<string, string> {
 	const vars: Record<string, string> = {}

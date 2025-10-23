@@ -1,4 +1,4 @@
-import type { Theme } from "../model/types"
+import type { Theme } from "../model"
 import { defaultTheme } from "../styles/defaults"
 
 let currentTheme: Theme = defaultTheme

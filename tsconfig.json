@@ -8,6 +8,9 @@
 		"moduleDetection": "force",
 		"module": "Preserve",
 		"moduleResolution": "bundler",
+		"paths": {
+			"@lib/*": ["./src/*"]
+		},
 		"resolveJsonModule": true,
 		"allowImportingTsExtensions": false,
 		"allowJs": true,
@@ -35,6 +38,5 @@
 		"forceConsistentCasingInFileNames": true,
 		"verbatimModuleSyntax": true,
 		"skipLibCheck": true
-	},
-	"include": ["src"]
+	}
 }

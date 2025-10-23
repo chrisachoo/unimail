@@ -1,4 +1,4 @@
-import type { Theme } from "../model/types"
+import type { Theme } from "../model"
 import { UTILITIES } from "../styles/utilities"
 import { resolveCssVariables, themeToCssVars } from "./theme"
 

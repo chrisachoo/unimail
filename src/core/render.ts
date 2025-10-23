@@ -1,4 +1,4 @@
-import type { RenderEmailOptions } from "../model/types"
+import type { RenderEmailOptions } from "../model"
 import { defaultTheme } from "../styles/defaults"
 import { mergeUtilities } from "./merge-utilities"
 import { cssVarsInlineStyle, themeToCssVars } from "./theme"

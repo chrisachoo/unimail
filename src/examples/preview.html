@@ -41,7 +41,12 @@
 			import { layout, render } from "../core/index.ts"
 			import { createTheme } from "../styles/defaults.ts"
 
-			const lightTheme = createTheme({})
+			const lightTheme = createTheme({
+				background: "#ffffff",
+				surface: "#f9fafb",
+				text: "#111827",
+				primary: "#3b82f6",
+			})
 			const darkTheme = createTheme({
 				colors: { background: "#0f172a", surface: "#1e293b", text: "#e2e8f0", primary: "#10b981" },
 			})
